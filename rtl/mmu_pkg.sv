@@ -13,12 +13,6 @@ package mmu_pkg;
     parameter int TLB_ENTRIES      = 16;
     parameter int TLB_INDEX_WIDTH  = $clog2(TLB_ENTRIES);
 
-    typedef struct packed {
-        logic valid;
-        logic [VPN_WIDTH-1:0] vpn;
-        logic [PPN_WIDTH-1:0] ppn;
-    } tlb_entry_t;
-
     typedef enum logic [1:0] {
         IDLE,
         READ_PTE,

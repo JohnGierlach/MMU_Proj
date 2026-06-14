@@ -73,6 +73,7 @@ page_table_mem u_page_table (
 
 assign lookup_vpn =virt_addr[VA_WIDTH-1:PAGE_OFFSET_BITS];
 assign page_offset = virt_addr[PAGE_OFFSET_BITS-1:0];
-assign phys_addr = {tld_ppn, page_offset};
+assign phys_addr = {tlb_ppn, page_offset};
+assign page_fault = walker_fault;
 
 endmodule

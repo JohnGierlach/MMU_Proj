@@ -1,0 +1,167 @@
+$date
+	Sun Jun 14 15:01:58 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tlb_tb $end
+$var wire 20 ! return_ppn [19:0] $end
+$var wire 1 " miss $end
+$var wire 4 # hit_idx [3:0] $end
+$var wire 1 $ hit $end
+$var reg 1 % iclk $end
+$var reg 1 & irst_n $end
+$var reg 1 ' lookup_valid $end
+$var reg 20 ( lookup_vpn [19:0] $end
+$var reg 20 ) refill_ppn [19:0] $end
+$var reg 1 * refill_valid $end
+$var reg 20 + refill_vpn [19:0] $end
+$scope module uut $end
+$var wire 1 $ hit $end
+$var wire 1 % iclk $end
+$var wire 1 & irst_n $end
+$var wire 1 ' lookup_valid $end
+$var wire 20 , lookup_vpn [19:0] $end
+$var wire 1 " miss $end
+$var wire 20 - refill_ppn [19:0] $end
+$var wire 1 * refill_valid $end
+$var wire 20 . refill_vpn [19:0] $end
+$var wire 20 / return_ppn [19:0] $end
+$var reg 1 0 found_match $end
+$var reg 4 1 hit_idx [3:0] $end
+$var reg 16 2 match [15:0] $end
+$var reg 4 3 repl_ptr [3:0] $end
+$var reg 20 4 tmp_ppn [19:0] $end
+$var integer 32 5 i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b10000 5
+b0 4
+bx 3
+bx 2
+b0 1
+00
+b0 /
+b0 .
+b0 -
+b0 ,
+b0 +
+0*
+b0 )
+b0 (
+0'
+0&
+0%
+0$
+b0 #
+0"
+b0 !
+$end
+#5000
+b0 2
+b0 3
+b10000 5
+1%
+#10000
+0%
+#15000
+b10000 5
+1%
+#20000
+0%
+1&
+#25000
+1%
+#30000
+0%
+1*
+#35000
+b1 2
+b10000 5
+b1 3
+1%
+#40000
+0%
+0*
+#45000
+1%
+#50000
+1$
+10
+b10000 5
+0%
+1'
+#55000
+1%
+#60000
+0$
+b10000 5
+00
+0%
+0'
+#65000
+1%
+#70000
+1$
+10
+b10000 5
+0%
+1'
+#75000
+1%
+#80000
+0$
+b10000 5
+00
+0%
+0'
+#85000
+1%
+#90000
+0%
+1*
+#95000
+b11 2
+b10000 5
+b10 3
+1%
+#100000
+0%
+0*
+#105000
+1%
+#110000
+1$
+10
+b10000 5
+0%
+1'
+#115000
+1%
+#120000
+0$
+b10000 5
+00
+0%
+0'
+#125000
+1%
+#130000
+0%
+#135000
+1%
+#140000
+0%
+#145000
+1%
+#150000
+0%

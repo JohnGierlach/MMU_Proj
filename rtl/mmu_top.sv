@@ -34,7 +34,7 @@ logic [VPN_WIDTH-1:0] rd_vpn;
 logic pte_valid;
 logic [PPN_WIDTH-1:0] pte_ppn;
 
-tlb u_tlb (
+tlb_unit u_tlb (
     .iclk(iclk),
     .irst_n(irst_n),
     .lookup_valid(req_valid),
@@ -47,7 +47,7 @@ tlb u_tlb (
     .refill_ppn(walker_ppn)
 );
 
-page_walker u_page_walker (
+page_walker_unit u_page_walker (
     .iclk(iclk),
     .irst_n(irst_n),
     .miss_valid(tlb_miss),
@@ -71,9 +71,10 @@ page_table_mem u_page_table (
     .pte_ppn(pte_ppn)
 );
 
-assign lookup_vpn =virt_addr[VA_WIDTH-1:PAGE_OFFSET_BITS];
+assign lookup_vpn = virt_addr[VA_WIDTH-1:PAGE_OFFSET_BITS];
 assign page_offset = virt_addr[PAGE_OFFSET_BITS-1:0];
 assign phys_addr = {tlb_ppn, page_offset};
+assign resp_valid = tlb_hit;
 assign page_fault = walker_fault;
 
 endmodule
